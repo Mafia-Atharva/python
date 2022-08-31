@@ -12,7 +12,7 @@ word=""
 for i in range(n):
     word=input("Enter string "+str(i+1)+":")
     main.append(word)
-'''
+
 #To create a list of length of strings
 submain=[]
 for i in range(n):
@@ -51,7 +51,7 @@ if(str1==str2):
     print(str1,"is a palindrome")
 else:
     print(str1,"is not a palindrome")
-'''
+
 #To display index of first appearance of the substring
 print(main)
 index=0
