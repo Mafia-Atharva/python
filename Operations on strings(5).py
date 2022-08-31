@@ -1,4 +1,4 @@
-#Function to check length of string
+#Function to check lengths of string
 def length(main):
     cnt=0
     for i in main:
@@ -10,9 +10,9 @@ n=int(input("Enter number of strings:"))
 main=[]
 word=""
 for i in range(n):
-    word=input("Enter string"+str(i+1)+":")
+    word=input("Enter string "+str(i+1)+":")
     main.append(word)
-
+'''
 #To create a list of length of strings
 submain=[]
 for i in range(n):
@@ -29,7 +29,7 @@ for i in range(n):
         index=i
 print("The longest word among the given strings is",main[index])
 
-#To check frequency of occurence of an alphabet
+#To determine the frequency of occurrence of particular character in the string
 print(main)
 x=int(input("Enter the number of string to check frequency of occurence:"))
 char=input("Enter the alphabet to check:")
@@ -42,7 +42,7 @@ if(freq==0):
 else:
     print("The given alphabet appears",freq,"times")
 
-#To check for palindrome
+#To check whether given string is palindrome or not 
 print(main)
 x=int(input("Enter the number of string to check for palindrome:"))
 str1=main[x-1]
@@ -51,3 +51,14 @@ if(str1==str2):
     print(str1,"is a palindrome")
 else:
     print(str1,"is not a palindrome")
+'''
+#To display index of first appearance of the substring
+print(main)
+index=0
+x=int(input("Enter the number of string to check for first occurence:"))
+substring=input("Enter substring:")
+for i in main[x-1]:
+    index+=1
+    if(i==substring):
+        print(substring,"first found at position",index)
+        break;
