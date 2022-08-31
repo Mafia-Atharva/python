@@ -1,4 +1,4 @@
-#Function to check lenght of string
+#Function to check length of string
 def length(main):
     cnt=0
     for i in main:
@@ -13,7 +13,7 @@ for i in range(n):
     word=input("Enter string"+str(i+1)+":")
     main.append(word)
 
-#To create a list of lenghts of strings
+#To create a list of length of strings
 submain=[]
 for i in range(n):
     x=length(main[i])
