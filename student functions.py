@@ -41,7 +41,7 @@ def frequency(marks):
     print("Frequency of entered marks=",freq)
     
 for i in range(no):
-    imarks=int(input("Enter marks of student"+str(i+1)+":"))
+    imarks=int(input("Enter marks of student "+str(i+1)+":"))
     marks.append(imarks)
 average(marks)
 highest(marks)
