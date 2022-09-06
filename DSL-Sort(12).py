@@ -1,7 +1,7 @@
 numbers=[]
 n=int(input("Enter number of numbers to sort:"))
 for i in range(n):
-    number=int(input("Enter number "+str(i+1)+" "))
+    number=int(input("Enter number "+str(i+1)+":"))
     numbers.append(number)
 
 def selection_sort_asc(numbers):
