@@ -63,6 +63,6 @@ while True:
         frequency(marks)
     elif choice==6:
         print("Thank you for using this program!")
-        break;
+        break
     else:
         print("Please enter a valid choice")
