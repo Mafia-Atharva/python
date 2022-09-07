@@ -82,9 +82,8 @@ def first_appearance():
             print(substring,"first found at position",index)
             break;
         
-
-print("*******************Menu*******************")
 while True:
+    print("*******************Menu*******************")
     choice=int(input(("1.Display longest string\n2.Check the length of longest string\n3.Check frequency of occurence\n4.Check for palindrome\n5.Check for first appearance of substring\n6.Exit\nEnter your choice(1/2/3/4/5/6):")))
     if choice==1:
         longest()
