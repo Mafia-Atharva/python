@@ -98,7 +98,7 @@ while True:
     elif choice==5:
         first_appearance()
     elif choice==6:
-        False
+        print("Thank you for using this program!")
+        break;
     else:
         print("Please enter a valid choice")
-    
