@@ -1,3 +1,10 @@
+'''
+Write a pythonprogram to store first year percentage of students in array. Write function
+for sorting array of floating point numbers in ascending order using
+a) Selection Sort
+b) Bubble sort and display top five scores.
+'''
+
 #Ascending selection sort
 def selection_sort_asc(numbers):
     for i in range(n-1):
@@ -55,10 +62,12 @@ def bubble_sort_desc(numbers):
     else:
         print("\nThanks for using this program!")
 
+#Function to display top 5 marks if sorted in ascending order
 def top_five_marks_asc(numbers):
     print("Top 5 Marks are:")
     print(*numbers[n:n-6:-1])
 
+#Function to display top 5 marks if sorted in descending order
 def top_five_marks_desc(numbers):
     print("Top 5 Marks are:")
     print(*numbers[0:5:])
