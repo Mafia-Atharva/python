@@ -6,7 +6,13 @@ def selection_sort_asc(numbers):
             if numbers[j]<numbers[min_number]:
                 min_number=j
         numbers[i],numbers[min_number]=numbers[min_number],numbers[i]
-    print(numbers)
+    print("Marks of students in ascending order:",numbers)
+    top=input("\nDo you want to display top marks from the list (yes/no) : ")
+    if top=='yes' or top=='y':
+        top_five_marks_asc(numbers)
+    else:
+        print("\nThanks for using this program!")
+
 
 #Descending selection sort
 def selection_sort_desc(numbers):
@@ -16,7 +22,12 @@ def selection_sort_desc(numbers):
             if numbers[j]>numbers[min_number]:
                 min_number=j
         numbers[i],numbers[min_number]=numbers[min_number],numbers[i]
-    print(numbers)
+    print("Marks of students in descending order:",numbers)
+    top=input("\nDo you want to display top marks from the list (yes/no) : ")
+    if top=='yes' or top=='y':
+        top_five_marks_desc(numbers)
+    else:
+        print("\nThanks for using this program!")
 
 #Ascending bubble sort
 def bubble_sort_asc(numbers):
@@ -24,22 +35,39 @@ def bubble_sort_asc(numbers):
         for j in range(0, n-i-1):
             if numbers[j] > numbers[j + 1]:
                 numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-    print("Elements sorted using bubble sort:\n",numbers)
+    print("Marks of students in ascending order:",numbers)
+    top=input("\nDo you want to display top marks from the list (yes/no) : ")
+    if top=='yes' or top=='y':
+        top_five_marks_asc(numbers)
+    else:
+        print("\nThanks for using this program!")
 
-#Ascending bubble sort
+#Descending bubble sort
 def bubble_sort_desc(numbers):
     for i in range(n-1):
         for j in range(0, n-i-1):
             if numbers[j] < numbers[j + 1]:
                 numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-    print("Elements sorted using bubble sort:\n",numbers)
+    print("Marks of students in descending order:",numbers)
+    top=input("\nDo you want to display top marks from the list (yes/no) : ")
+    if top=='yes' or top=='y':
+        top_five_marks_desc(numbers)
+    else:
+        print("\nThanks for using this program!")
 
+def top_five_marks_asc(numbers):
+    print("Top 5 Marks are:")
+    print(*numbers[n:n-6:-1])
+
+def top_five_marks_desc(numbers):
+    print("Top 5 Marks are:")
+    print(*numbers[0:5:])
 
 #Accepting elements from user
 numbers=[]
-n=int(input("Enter number of numbers to sort:"))
+n=int(input("Enter number of students:"))
 for i in range(n):
-    number=int(input("Enter number "+str(i+1)+":"))
+    number=int(input("Enter marks of student "+str(i+1)+":"))
     numbers.append(number)
 
 
