@@ -35,7 +35,6 @@ for i in range(n):
     percentage=int(input("Enter percentage of student "+str(i+1)+":"))
     marks.append(percentage)
 
-
 #Menu and choice 
 while True:
     print("************MENU************")
