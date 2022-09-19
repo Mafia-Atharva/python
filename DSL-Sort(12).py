@@ -5,96 +5,47 @@ a) Selection Sort
 b) Bubble sort and display top five scores.
 '''
 
-#Ascending selection sort
-def selection_sort_asc(numbers):
+#Selection sort
+def selection_sort(marks):
     for i in range(n-1):
         min_number=i
         for j in range(i+1,n):
-            if numbers[j]<numbers[min_number]:
+            if marks[j]<marks[min_number]:
                 min_number=j
-        numbers[i],numbers[min_number]=numbers[min_number],numbers[i]
-    print("Marks of students in ascending order:",numbers)
-    top=input("\nDo you want to display top marks from the list (yes/no) : ")
-    if top=='yes' or top=='y':
-        top_five_marks_asc(numbers)
-    else:
-        print("\nThanks for using this program!")
+        marks[i],marks[min_number]=marks[min_number],marks[i]
+    print("Marks sorted using selection sort:")
+    print(marks)
 
-
-#Descending selection sort
-def selection_sort_desc(numbers):
-    for i in range(n-1):
-        min_number=i
-        for j in range(i+1,n):
-            if numbers[j]>numbers[min_number]:
-                min_number=j
-        numbers[i],numbers[min_number]=numbers[min_number],numbers[i]
-    print("Marks of students in descending order:",numbers)
-    top=input("\nDo you want to display top marks from the list (yes/no) : ")
-    if top=='yes' or top=='y':
-        top_five_marks_desc(numbers)
-    else:
-        print("\nThanks for using this program!")
-
-#Ascending bubble sort
-def bubble_sort_asc(numbers):
+#Bubble sort
+def bubble_sort(marks):
     for i in range(n-1):
         for j in range(0, n-i-1):
-            if numbers[j] > numbers[j + 1]:
-                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-    print("Marks of students in ascending order:",numbers)
-    top=input("\nDo you want to display top marks from the list (yes/no) : ")
-    if top=='yes' or top=='y':
-        top_five_marks_asc(numbers)
-    else:
-        print("\nThanks for using this program!")
-
-#Descending bubble sort
-def bubble_sort_desc(numbers):
-    for i in range(n-1):
-        for j in range(0, n-i-1):
-            if numbers[j] < numbers[j + 1]:
-                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
-    print("Marks of students in descending order:",numbers)
-    top=input("\nDo you want to display top marks from the list (yes/no) : ")
-    if top=='yes' or top=='y':
-        top_five_marks_desc(numbers)
-    else:
-        print("\nThanks for using this program!")
-
-#Function to display top 5 marks if sorted in ascending order
-def top_five_marks_asc(numbers):
-    print("Top 5 Marks are:")
-    print(*numbers[n:n-6:-1])
-
-#Function to display top 5 marks if sorted in descending order
-def top_five_marks_desc(numbers):
-    print("Top 5 Marks are:")
-    print(*numbers[0:5:])
-
+            if marks[j] > marks[j + 1]:
+                marks[j], marks[j + 1] = marks[j + 1], marks[j]
+    print("Marks sorted using bubble sort:",marks)
+    reversed=marks[::-1]
+    if len(marks)>=5:
+        print("Top 5 scores:",reversed[0:5])
+    print("Cannot display top 5 scores. Please enter more than 5 scores")
+    
 #Accepting elements from user
-numbers=[]
+marks=[]
 n=int(input("Enter number of students:"))
 for i in range(n):
-    number=int(input("Enter marks of student "+str(i+1)+":"))
-    numbers.append(number)
+    percentage=int(input("Enter percentage of student "+str(i+1)+":"))
+    marks.append(percentage)
 
 
-#Menu
-print("************MENU************")
-print("1. Selection Sort\n2. Bubble sort")
-choice=int(input("Enter your choice(1/2):"))
-if choice==1:
-    subchoice=int(input("1.Ascending\n2.Descending\nEnter your choice(1/2):"))
-    if subchoice==1:
-        selection_sort_asc(numbers)
-    elif subchoice==2:
-        selection_sort_desc(numbers)
-elif choice==2:
-    subchoice=int(input("1.Ascending\n2.Descending\nEnter your choice(1/2):"))
-    if subchoice==1:
-        bubble_sort_asc(numbers)
-    elif subchoice==2:
-        bubble_sort_desc(numbers)
-else:
-    print("Invalid choice")
+#Menu and choice 
+while True:
+    print("************MENU************")
+    print("1. Selection Sort\n2. Bubble sort")
+    choice=int(input("Enter your choice(1/2):"))
+    if choice==1:
+        selection_sort(marks)
+        break
+    elif choice==2:
+        bubble_sort(marks)
+        break
+    else:
+        print("Please enter a valid choice")
