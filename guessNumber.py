@@ -8,12 +8,11 @@ while guess!=guessnumber:
         attempts+=1
         guess=int(input("Enter your guess:"))
         if guess<guessnumber:
-            print("Guess is too low. Enter a higher number")
+            print("Your guess is lower")
         elif guess>guessnumber:
-            print("Guess is too high. Enter a lower number")
+            print("Your guess is higher")
         else:
             break
     except ValueError:
-        print("Invalid Input. Please enter a number")
-        continue
+        print("Your guess must be a number fool")
 print("Congratulations! You guessed the number correctly. It took you {} attempts".format(attempts))
